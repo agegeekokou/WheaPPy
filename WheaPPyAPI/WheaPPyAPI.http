@@ -1,0 +1,6 @@
+@WheaPPyAPI_HostAddress = http://localhost:5230
+
+GET {{WheaPPyAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
