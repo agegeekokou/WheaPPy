@@ -1,6 +1,11 @@
+using Microsoft.EntityFrameworkCore;
+using WheaPPyAPI.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<WheaPPyDbContext>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("WheaPPyDbConnectionString")));
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
